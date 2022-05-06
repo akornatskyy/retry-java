@@ -1,5 +1,7 @@
 # retry-java
 
+[![tests](https://github.com/akornatskyy/retry-java/actions/workflows/tests.yaml/badge.svg)](https://github.com/akornatskyy/retry-java/actions/workflows/tests.yaml)
+
 Repeat failed call.
 
 ## Usage
