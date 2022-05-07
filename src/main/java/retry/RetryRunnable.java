@@ -2,16 +2,32 @@ package retry;
 
 import java.util.function.Predicate;
 
+/**
+ * The type Retry runnable.
+ */
 public final class RetryRunnable {
   private RetryRunnable() {
   }
 
+  /**
+   * Run.
+   *
+   * @param runnable the runnable
+   * @param options  the options
+   */
   public static void run(
       Runnable runnable,
       RetryOptions options) {
     run(runnable, null, options);
   }
 
+  /**
+   * Run.
+   *
+   * @param runnable  the runnable
+   * @param predicate the predicate
+   * @param options   the options
+   */
   public static void run(
       Runnable runnable,
       Predicate<RuntimeException> predicate,

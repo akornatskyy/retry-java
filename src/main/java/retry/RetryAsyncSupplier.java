@@ -8,10 +8,22 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.BiPredicate;
 import java.util.function.Supplier;
 
+/**
+ * The type Retry async supplier.
+ */
 public final class RetryAsyncSupplier {
   private RetryAsyncSupplier() {
   }
 
+  /**
+   * Get completable future.
+   *
+   * @param <T>             the type parameter
+   * @param executorService the executor service
+   * @param supplier        the supplier
+   * @param options         the options
+   * @return the completable future
+   */
   public static <T> CompletableFuture<T> get(
       ScheduledExecutorService executorService,
       Supplier<CompletableFuture<T>> supplier,
@@ -19,6 +31,16 @@ public final class RetryAsyncSupplier {
     return get(executorService, supplier, null, options);
   }
 
+  /**
+   * Get completable future.
+   *
+   * @param <T>             the type parameter
+   * @param executorService the executor service
+   * @param supplier        the supplier
+   * @param predicate       the predicate
+   * @param options         the options
+   * @return the completable future
+   */
   public static <T> CompletableFuture<T> get(
       ScheduledExecutorService executorService,
       Supplier<CompletableFuture<T>> supplier,

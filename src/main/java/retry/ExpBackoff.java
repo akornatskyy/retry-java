@@ -3,11 +3,21 @@ package retry;
 import java.time.Duration;
 import java.util.Objects;
 
+/**
+ * The type Exponential backoff.
+ */
 public final class ExpBackoff implements Backoff {
   private final double initial;
   private final double multiplier;
   private final double factor;
 
+  /**
+   * Instantiates a new Exp backoff.
+   *
+   * @param initial    the initial duration
+   * @param multiplier the growing multiplier
+   * @param factor     the randomization factor
+   */
   public ExpBackoff(Duration initial, double multiplier, double factor) {
     Objects.requireNonNull(initial, "initial");
     if (multiplier < 1.0) {
@@ -33,7 +43,7 @@ public final class ExpBackoff implements Backoff {
     double delta = current * factor;
     double min = current - delta;
     double max = current + delta;
-    return (long)(min + Math.random() * (max - min + 1.0));
+    return (long) (min + Math.random() * (max - min + 1.0));
   }
 
   static class Builder {

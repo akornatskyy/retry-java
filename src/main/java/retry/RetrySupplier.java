@@ -3,14 +3,34 @@ package retry;
 import java.util.function.BiPredicate;
 import java.util.function.Supplier;
 
+/**
+ * The type Retry supplier.
+ */
 public final class RetrySupplier {
   private RetrySupplier() {
   }
 
+  /**
+   * Gets a result.
+   *
+   * @param <T>      the type parameter
+   * @param supplier the supplier
+   * @param options  the options
+   * @return the t
+   */
   public static <T> T get(Supplier<T> supplier, RetryOptions options) {
     return get(supplier, null, options);
   }
 
+  /**
+   * Gets the result.
+   *
+   * @param <T>       the type parameter
+   * @param supplier  the supplier
+   * @param predicate the predicate
+   * @param options   the options
+   * @return the t
+   */
   public static <T> T get(
       Supplier<T> supplier,
       BiPredicate<T, RuntimeException> predicate,

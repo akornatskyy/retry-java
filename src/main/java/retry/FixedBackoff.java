@@ -3,6 +3,9 @@ package retry;
 import java.time.Duration;
 import java.util.Objects;
 
+/**
+ * The type Fixed backoff.
+ */
 public final class FixedBackoff implements Backoff {
   private final long delay;
 

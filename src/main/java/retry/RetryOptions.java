@@ -2,6 +2,9 @@ package retry;
 
 import java.util.Objects;
 
+/**
+ * The type Retry options.
+ */
 public final class RetryOptions {
   private final int max;
   private final Backoff backoff;
