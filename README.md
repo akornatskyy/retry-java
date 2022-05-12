@@ -1,6 +1,7 @@
 # retry-java
 
 [![tests](https://github.com/akornatskyy/retry-java/actions/workflows/tests.yaml/badge.svg)](https://github.com/akornatskyy/retry-java/actions/workflows/tests.yaml)
+[![maven central](https://img.shields.io/maven-central/v/io.github.akornatskyy/retry.svg)](https://search.maven.org/search?q=g:%22io.github.akornatskyy%22%20AND%20a:%22retry%22)
 
 Repeat failed call.
 
@@ -107,34 +108,9 @@ Add as a maven dependency:
 </dependency>
 ```
 
-or use a snapshot from Sonatype:
-
-```xml
-<dependency>
-  <groupId>io.github.akornatskyy</groupId>
-  <artifactId>retry</artifactId>
-  <version>1.0-SNAPSHOT</version>
-</dependency>
-```
-
-```xml
-<repositories>
-  <repository>
-    <id>snapshots</id>
-    <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-    <releases>
-      <enabled>false</enabled>
-    </releases>
-    <snapshots>
-      <enabled>true</enabled>
-    </snapshots>
-  </repository>
-</repositories>
-```
-
 ## Release
 
 ```sh
-mvn versions:set -DnewVersion=1.0.0
+mvn versions:set -DnewVersion=1.X.0
 mvn -P release clean deploy
 ```
