@@ -102,7 +102,7 @@ Add as a maven dependency:
 
 ```xml
 <dependency>
-  <groupId>com.github.akornatskyy</groupId>
+  <groupId>io.github.akornatskyy</groupId>
   <artifactId>retry</artifactId>
   <version>1.0.0</version>
 </dependency>
