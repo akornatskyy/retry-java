@@ -1,10 +1,9 @@
 package retry;
 
+import java.time.Duration;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-
-import java.time.Duration;
 
 class RetryRunnableTest {
   private final static RetryOptions OPTIONS = RetryOptions.builder()

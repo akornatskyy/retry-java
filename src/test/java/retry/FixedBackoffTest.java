@@ -1,9 +1,8 @@
 package retry;
 
+import java.time.Duration;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
-
-import java.time.Duration;
 
 class FixedBackoffTest {
 

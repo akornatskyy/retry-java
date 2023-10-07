@@ -1,15 +1,14 @@
 package retry;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Supplier;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 class RetryAsyncSupplierTest {
   private final static RetryOptions OPTIONS = RetryOptions.builder()
@@ -51,7 +50,6 @@ class RetryAsyncSupplierTest {
 
     Mockito.verify(supplier, Mockito.times(3)).get();
   }
-
 
   @Test
   void predicateIgnoresError() {
