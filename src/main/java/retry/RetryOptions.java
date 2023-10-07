@@ -15,6 +15,10 @@ public final class RetryOptions {
     this.backoff = backoff;
   }
 
+  public static RetryOptions.Builder builder() {
+    return new Builder();
+  }
+
   public int getMax() {
     return max;
   }
@@ -23,11 +27,10 @@ public final class RetryOptions {
     return backoff;
   }
 
-  public static RetryOptions.Builder builder() {
-    return new Builder();
-  }
-
-  static class Builder {
+  /**
+   * The builder for retry options.
+   */
+  public static class Builder {
     private int max = 3;
     private Backoff backoff;
 

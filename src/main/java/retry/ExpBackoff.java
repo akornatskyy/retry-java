@@ -46,7 +46,10 @@ public final class ExpBackoff implements Backoff {
     return (long) (min + Math.random() * (max - min + 1.0));
   }
 
-  static class Builder {
+  /**
+   * The builder for exponential backoff.
+   */
+  public static class Builder {
     private Duration initial = Duration.ofMillis(500);
     private double multiplier = 1.5;
     private double factor = 0.2;
