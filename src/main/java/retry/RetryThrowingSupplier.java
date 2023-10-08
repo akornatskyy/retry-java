@@ -15,7 +15,8 @@ public final class RetryThrowingSupplier {
    * @param <T>      the type parameter
    * @param supplier the supplier
    * @param options  the options
-   * @return the t
+   * @return a result
+   * @throws Exception This method may throw exceptions.
    */
   public static <T> T get(ThrowingSupplier<T> supplier, RetryOptions options)
       throws Exception {
@@ -23,13 +24,14 @@ public final class RetryThrowingSupplier {
   }
 
   /**
-   * Gets the result.
+   * Gets a result.
    *
    * @param <T>       the type parameter
    * @param supplier  the supplier
    * @param predicate the predicate
    * @param options   the options
-   * @return the t
+   * @return a result
+   * @throws Exception This method may throw exceptions.
    */
   public static <T> T get(
       ThrowingSupplier<T> supplier,

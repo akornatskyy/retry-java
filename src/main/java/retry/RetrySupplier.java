@@ -16,20 +16,20 @@ public final class RetrySupplier {
    * @param <T>      the type parameter
    * @param supplier the supplier
    * @param options  the options
-   * @return the t
+   * @return a result
    */
   public static <T> T get(Supplier<T> supplier, RetryOptions options) {
     return get(supplier, null, options);
   }
 
   /**
-   * Gets the result.
+   * Gets a result.
    *
    * @param <T>       the type parameter
    * @param supplier  the supplier
    * @param predicate the predicate
    * @param options   the options
-   * @return the t
+   * @return a result
    */
   public static <T> T get(
       Supplier<T> supplier,

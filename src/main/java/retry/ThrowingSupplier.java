@@ -10,7 +10,8 @@ public interface ThrowingSupplier<T> {
   /**
    * Get a result, potentially throwing an exception.
    *
-   * @return a result
+   * @return A result.
+   * @throws Exception This method may throw exceptions.
    */
   T get() throws Exception;
 }
