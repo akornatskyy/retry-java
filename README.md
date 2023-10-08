@@ -66,8 +66,15 @@ with predicate for response value:
 ```java
 Response response = RetrySupplier.get(
     () -> handler.operation(100),
-    (r, ex) -> r.getStatusCode() != 200,
+    (r, ex) -> r != null && r.getStatusCode() != 200,
     options);
+```
+
+### Retry Throwing Supplier
+
+```java
+Response response = RetryThrowingSupplier.get(
+    () -> handler.operation(), options);
 ```
 
 ### Retry Async Supplier
@@ -92,7 +99,7 @@ CompletableFuture<Response> future = RetryAsyncSupplier.get(
 CompletableFuture<Response> future = RetryAsyncSupplier.get(
     scheduledExecutor,
     () -> handler.operation(),
-    (r, ex) -> r.getStatusCode() != 200,
+    (r, ex) -> r != null && r.getStatusCode() != 200,
     options);
 ```
 
