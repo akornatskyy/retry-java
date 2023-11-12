@@ -1,7 +1,7 @@
 # retry-java
 
 [![tests](https://github.com/akornatskyy/retry-java/actions/workflows/tests.yaml/badge.svg)](https://github.com/akornatskyy/retry-java/actions/workflows/tests.yaml)
-[![maven central](https://img.shields.io/maven-central/v/io.github.akornatskyy/retry.svg)](https://search.maven.org/search?q=g:%22io.github.akornatskyy%22%20AND%20a:%22retry%22)
+[![maven central](https://img.shields.io/maven-central/v/io.github.akornatskyy/retry.svg)](https://central.sonatype.com/artifact/io.github.akornatskyy/retry)
 
 Repeat failed call.
 
